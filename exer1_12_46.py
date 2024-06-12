@@ -7,9 +7,9 @@ def main() -> None:
             y *= -1
         
         if (x / 3) < y < (3 * x):
-            print("INTERIOR")
+            print(f"x={x:.2f} y={y:.2f} INTERIOR")
         else:
-            print("EXTERIOR")
+            print(f"x={x:.2f} y={y:.2f} EXTERIOR")
         x = float(input())
         y = float(input())
     
