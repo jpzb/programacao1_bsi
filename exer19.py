@@ -74,30 +74,31 @@ def main() -> None:
         cont_total += 1
 
     if cont_total:
-        
-        print(f"A maior area = {maior_area:.2f} eh do triangulo: lado1 = {l1_maior:.2f}, lado2 = {l2_maior:.2f} e lado3 = {l3_maior}")
-        
-        if cont_equilatero:
-            perimetro_medio_equilateros: float = soma_perimetro_equilatero / cont_equilatero
-            print(f"{perimetro_medio_equilateros:.2f} eh o perimetro medio dos triangulos equilateros")
-        else:
-            print("0.00 eh o perimetro medio dos triangulos equilateros")
-          
-        if cont_isosceles: 
-            perimetro_medio_isosceles: float = soma_perimetro_isosceles / cont_isosceles
-            print(f"{perimetro_medio_isosceles:.2f} eh o perimetro medio dos triangulos isosceles")
-        else:
-            print("0.00 eh o perimetro medio dos triangulos isosceles")
+        if cont_triangulo: 
+            print(f"A maior area = {maior_area:.2f} eh do triangulo: lado1 = {l1_maior:.2f}, lado2 = {l2_maior:.2f} e lado3 = {l3_maior:.2f}")
     
-        if cont_escaleno:
-            perimetro_medio_escalenos: float = soma_perimetro_escaleno / cont_escaleno
-            print(f"{perimetro_medio_escalenos:.2f} eh o perimetro medio dos triangulos escalenos")
-        else:
-            print("0.00 eh o perimetro medio dos triangulos escalenos")
+            if cont_equilatero:
+                perimetro_medio_equilateros: float = soma_perimetro_equilatero / cont_equilatero
+                print(f"{perimetro_medio_equilateros:.2f} eh o perimetro medio dos triangulos equilateros")
+            else:
+                print("0.00 eh o perimetro medio dos triangulos equilateros")
+              
+            if cont_isosceles: 
+                perimetro_medio_isosceles: float = soma_perimetro_isosceles / cont_isosceles
+                print(f"{perimetro_medio_isosceles:.2f} eh o perimetro medio dos triangulos isosceles")
+            else:
+                print("0.00 eh o perimetro medio dos triangulos isosceles")
+        
+            if cont_escaleno:
+                perimetro_medio_escalenos: float = soma_perimetro_escaleno / cont_escaleno
+                print(f"{perimetro_medio_escalenos:.2f} eh o perimetro medio dos triangulos escalenos")
+            else:
+                print("0.00 eh o perimetro medio dos triangulos escalenos")
 
         print(f"Percentual de triangulos = {cont_triangulo * 100 / cont_total:.2f}")
         print(f"Percentual de nao triangulos = {cont_nao_triangulo * 100 / cont_total:.2f}")
-
+    else:
+        print("NAO HA DADOS PARA PROCESSAR")
 
 if __name__ == "__main__":
     main()
