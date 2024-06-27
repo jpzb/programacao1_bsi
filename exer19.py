@@ -74,6 +74,7 @@ def main() -> None:
         cont_total += 1
 
     if cont_total:
+        
         print(f"A maior area = {maior_area:.2f} eh do triangulo: lado1 = {l1_maior:.2f}, lado2 = {l2_maior:.2f} e lado3 = {l3_maior}")
         
         if cont_equilatero:
