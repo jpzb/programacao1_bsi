@@ -1,10 +1,7 @@
 def verificaPosicao(x: float,  y:float) -> str:
-    if y < 0:
-        y *= -1
-    
     retorno: str = ""
 
-    if (x / 3) < y < (3 * x):
+    if ((x / 3) > y > (3 * x)) or ((x / 3) < y < (3 * x)):
         retorno = f"x={x:.2f} y={y:.2f} INTERIOR"
     else:
         retorno = f"x={x:.2f} y={y:.2f} EXTERIOR"
